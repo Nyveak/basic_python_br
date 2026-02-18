@@ -178,7 +178,6 @@ json.loads('{"edad":30}')
 12. Mayor de dos  
 13. Leer archivo  
 14. Dict a JSON  
-15. Agent simple  
 
 ---
 
