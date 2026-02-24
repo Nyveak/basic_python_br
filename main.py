@@ -109,3 +109,10 @@ def exercise11():
         lista = [1, 2, 3, 4, 5]
         duplicada = [n * 2 for n in lista]
         return {"exercise": 11, "original": lista, "duplicada": duplicada}
+
+#Exercise 12
+
+@app.get("/exercise12")
+def exercise12(a: int, b: int):
+        mayor = a if a > b else b
+        return {"exercise": 12, "a": a, "b": b, "mayor": mayor}
