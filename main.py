@@ -64,3 +64,33 @@ def exercise7():
         }
         claves = list(persona.keys())
         return {"exercise": 7, "claves": claves}
+
+#Exercise 8
+
+class Producto:
+        def __init__(self, nombre: str, precio: float):
+                self.nombre = nombre
+                self.precio = precio
+
+        def to_dict(self):
+                return {
+                        "nombre": self.nombre,
+                        "precio": self.precio
+                }
+
+@app.get("/exercise8")
+def exercise8():
+        producto = Producto("Teclado", 150000)
+        return {"exercise": 8, "producto": producto.to_dict()}
+
+#Exercise 9
+
+@app.get("/exercise9")
+def exercise9(a: int = 0, b: int = 1):
+        try:
+                resultado = a / b
+                return {"exercise": 9, "resultado": resultado}
+        except ZeroDivisionError:
+                return {"exercise": 9, "error": "No se puede dividir por cero"}
+        except Exception as e:
+                return {"exercise": 9, "error": str(e)}
