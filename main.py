@@ -51,5 +51,16 @@ def exercise6():
                 "edad": 24,
                 "ciudad": "Barranquilla"
         }
-
         return {"exercise": 6, "persona": persona}	
+
+#Exercise 7
+
+@app.get("/exercise7")
+def exercise7():
+        persona = {
+                "nombre": "Kevin",
+                "edad": 24,
+                "ciudad": "Barranquilla"
+        }
+        claves = list(persona.keys())
+        return {"exercise": 7, "claves": claves}
