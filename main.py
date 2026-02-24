@@ -41,4 +41,15 @@ def exercise4():
 def exercise5(a: int, b: int):
 	resultado = a * b
 	return {"exercise": 5, "Resultado": resultado}
-	
+
+#Exercise 6
+
+@app.get("/exercise6")
+def exercise6():
+        persona = {
+                "nombre": "Kevin",
+                "edad": 24,
+                "ciudad": "Barranquilla"
+        }
+
+        return {"exercise": 6, "persona": persona}	
