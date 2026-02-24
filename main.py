@@ -109,7 +109,7 @@ def exercise11():
         lista = [1, 2, 3, 4, 5]
         duplicada = [n * 2 for n in lista]
         return {"exercise": 11, "original": lista, "duplicada": duplicada}
-
+ 
 #Exercise 12
 
 @app.get("/exercise12")
@@ -127,3 +127,21 @@ def exercise13():
                 return {"exercise": 13, "contenido": contenido}
         except Exception as e:
                 return {"exercise": 13, "error": str(e)}
+
+#Exercise 14
+
+@app.get("/exercise14")
+def exercise14():
+        diccionario = {
+                "nombre": "Kevin",
+                "edad": 24,
+                "ciudad": "Barranquilla"
+        }
+
+        convertir_json = json.dumps(diccionario)
+
+        return {
+                "exercise": 14,
+                "dict_original": diccionario,
+                "json_convertido": convertir_json
+        }
