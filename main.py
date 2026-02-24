@@ -34,3 +34,11 @@ def exercise4():
 	lista = [1, 2, 3, 4, 5]
 	recorrido = [n for n in lista]
 	return {"exercise": 4, "Lista": recorrido}
+
+#Exercise 5
+
+@app.get("/exercise5")
+def exercise5(a: int, b: int):
+	resultado = a * b
+	return {"exercise": 5, "Resultado": resultado}
+	
