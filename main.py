@@ -94,3 +94,10 @@ def exercise9(a: int = 0, b: int = 1):
                 return {"exercise": 9, "error": "No se puede dividir por cero"}
         except Exception as e:
                 return {"exercise": 9, "error": str(e)}
+
+#Exercise 10
+
+@app.get("/exercise10")
+def exercise10():
+        lista = list(range(1, 11))
+        return {"exercise": 10, "lista": lista}
