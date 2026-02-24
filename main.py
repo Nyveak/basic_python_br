@@ -116,3 +116,14 @@ def exercise11():
 def exercise12(a: int, b: int):
         mayor = a if a > b else b
         return {"exercise": 12, "a": a, "b": b, "mayor": mayor}
+
+#Exercise 13
+
+@app.get("/exercise13")
+def exercise13():
+        try:
+                with open("archivo.txt", "r") as f:
+                        contenido = f.read()
+                return {"exercise": 13, "contenido": contenido}
+        except Exception as e:
+                return {"exercise": 13, "error": str(e)}
